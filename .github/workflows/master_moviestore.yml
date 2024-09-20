@@ -3,7 +3,7 @@ name: Build and Deploy to Azure
 on:
   push:
     branches:
-      - main
+      - master # Заменяме 'main' с 'master', тъй като целият код е в master клона
 
 jobs:
   build-and-deploy:
@@ -18,19 +18,19 @@ jobs:
     - name: 'Setup .NET Core SDK'
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '6.0.x' # Използване на .NET 6.0 SDK
 
     # Restore dependencies
     - name: 'Restore dependencies'
-      run: dotnet restore './MovieStoreMvc.csproj'
+      run: dotnet restore './MovieStoreMvc/MovieStoreMvc.csproj'
 
     # Build the project
     - name: 'Build the project'
-      run: dotnet build './MovieStoreMvc.csproj' --configuration Release --no-restore
+      run: dotnet build './MovieStoreMvc/MovieStoreMvc.csproj' --configuration Release --no-restore
 
     # Publish the project
     - name: 'Publish the project'
-      run: dotnet publish './MovieStoreMvc.csproj' --configuration Release --output ./output
+      run: dotnet publish './MovieStoreMvc/MovieStoreMvc.csproj' --configuration Release --output ./output
 
     # Use Azure login action with the credentials from AZURE_CREDENTIALS secret
     - name: 'Login via Azure CLI'
@@ -42,6 +42,6 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'MovieStoreApp' # Your Azure Web App name
+        app-name: 'MovieStoreApp' # Задаване на името на Azure Web App
         slot-name: 'production'
-        package: './output'
+        package: './output' # Път до публикуваното приложение
