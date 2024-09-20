@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null; // Определя, че този шаблон няма да използва общия макет
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>logout</title>
+</head>д
+<body>
+    <form method="post" action="/UserAuthentication/Logout">
+        <button type="submit">logout</button>
+    </form>
+</body>
+</html>

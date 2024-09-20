@@ -1,0 +1,35 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model MovieStoreMvc.Models.DTO.RegistrationModel
+
+<h2>Registration</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Username">Username:</label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+    <div>
+        <label asp-for="Password">Password:</label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="PasswordConfirm">Confirm Password:</label>
+        <input asp-for="PasswordConfirm" type="password" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <input type="hidden" asp-for="Role" value="User" />
+    <button type="submit">Register</button>
+</form>
