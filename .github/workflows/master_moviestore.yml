@@ -3,7 +3,7 @@ name: Build and Deploy to Azure
 on:
   push:
     branches:
-      - master  # Тук използваме master, тъй като всичко е в този клон
+      - master  # Използваш master клона
 
 jobs:
   build-and-deploy:
@@ -22,37 +22,26 @@ jobs:
 
     # Restore dependencies
     - name: 'Restore dependencies'
-      run: dotnet restore './MovieStoreMvc/MovieStoreMvc.csproj'
+      run: dotnet restore './MovieStoreMvc.csproj'  # Коригираният път
 
     # Build the project
     - name: 'Build the project'
-      run: dotnet build './MovieStoreMvc/MovieStoreMvc.csproj' --configuration Release --no-restore
+      run: dotnet build './MovieStoreMvc.csproj' --configuration Release --no-restore  # Коригираният път
 
     # Publish the project
     - name: 'Publish the project'
-      run: dotnet publish './MovieStoreMvc/MovieStoreMvc.csproj' --configuration Release --output ./output
+      run: dotnet publish './MovieStoreMvc.csproj' --configuration Release --output ./output  # Коригираният път
 
     # Use Azure login action with the credentials from secrets
     - name: 'Login via Azure CLI'
       uses: azure/login@v1
       with:
-        creds: '{
-          "clientId": "22022507-ced5-42aa-854f-e7cd41f61eb8",
-          "clientSecret": "rCE8Q~VobTnxKJ_KVZF7oZPgnktrKRwX-fmjhbsu",
-          "subscriptionId": "f3b6ce50-3d9f-4dc5-8a72-1821d00adc20",
-          "tenantId": "f1b52390-37c4-41a6-8a65-49b9df62cd54",
-          "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-          "resourceManagerEndpointUrl": "https://management.azure.com/",
-          "activeDirectoryGraphResourceId": "https://graph.windows.net/",
-          "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-          "galleryEndpointUrl": "https://gallery.azure.com/",
-          "managementEndpointUrl": "https://management.core.windows.net/"
-        }'
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     # Deploy to Azure Web App
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'MovieStoreApp' # Your Azure Web App name
+        app-name: 'MovieStoreApp'
         slot-name: 'production'
         package: './output'
