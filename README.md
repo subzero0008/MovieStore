@@ -1,19 +1,22 @@
 # Movie Store Application
 
-## Description
-The **Movie Store** is a web application built using ASP.NET Core (.NET 6) that provides users with detailed information about various movies. Users can register, browse movies, and view details such as the release year, director, cast, genre, broadcast information, and a brief plot summary.
+The Movie Store is a university project developed for the .NET course. It is a web application built using ASP.NET Core (.NET 6) that provides users with detailed information about various movies. The application uses SQL Server as its database and follows the MVC (Model-View-Controller) architecture.
 
-There are two main types of users:
-1. **Regular Users**: Can register, browse the movie catalog, and view details about their favorite films.
-2. **Administrators**: Have additional permissions to manage the movie database. They can add, edit, and delete movies and genres, as well as manage user accounts.
+Users can register, browse movies, and view details such as the release year, director, cast, genre, broadcast information, and a brief plot summary.
 
-## Technologies
-- **ASP.NET Core** (.NET 6)
-- **MVC (Model-View-Controller)** architecture
-- **Entity Framework Core** for database access
-- **SQL Server** for data storage
-- **Razor Pages** for dynamic UI rendering
-- **Azure** for hosting (optional)
+User Roles
+The application now includes three user roles:
+
+Normal User – Can register, browse the movie catalog, and view movie details.
+Admin – Has additional permissions to manage movies and genres.
+Owner – Has full control over admin profiles and is the only one allowed to edit or delete admin users.
+
+Technologies
+ASP.NET Core (.NET 6)
+Entity Framework Core (EF Core) for database access
+SQL Server for data storage
+Razor Pages for dynamic UI rendering
+MVC (Model-View-Controller) architecture
 
 ## Features
 - **User Registration and Authentication**: Users can create accounts and log in to browse the movie collection.
@@ -24,8 +27,17 @@ There are two main types of users:
   - Delete movies from the catalog.
   - Manage user accounts (delete or modify user information).
 - **Role-based Access Control**: Regular users and admins have different access rights.
+- Owner – Has full control over admin profiles and is the only one allowed to edit or delete admin users.
 
 ## Installation
+Prerequisites
+To run the project, you need the following dependencies installed:
+
+.NET 6 SDK
+SQL Server
+Entity Framework Core
+ASP.NET Core MVC
+Razor Pages
 1. Clone the repository:
    ```bash
    git clone https://github.com/subzero0008/MovieStore.git
