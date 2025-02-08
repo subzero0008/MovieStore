@@ -8,14 +8,14 @@
   --font-mukta: "Mukta", sans-serif;
 }
 body {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--bg-color);
-  /* padding:0 3rem; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    width: 100%;
+    min-height: 100vh; /* Гарантира, че височината ще бъде поне колкото височината на екрана */
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Това гарантира, че съдържанието ще бъде разположено отгоре до долу */
 }
+
 
 .nav-bar {
   font-family: "Poppins", sans-serif;
@@ -80,9 +80,11 @@ body {
 }
 
 .container {
-  padding: 2rem;
-  width: 100%;
+    padding: 2rem;
+    width: 100%;
+    flex-grow: 1; /* Това позволява на съдържанието да расте и да запълни наличното пространство */
 }
+
 
 .search-bar{
   width: 100%; 
@@ -156,14 +158,17 @@ body {
 
 
 footer {
-  width: 100%;
-  height: 3rem;
-  background-color: rgb(240, 240, 240);
-  font-size: 1rem;
-  font-family: var(--font-mukta);
-  padding: 1% 2%;
-  text-align: right;
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(240, 240, 240);
+    font-size: 1rem;
+    font-family: var(--font-mukta);
+    padding: 1% 2%;
+    text-align: right;
+    position: relative;
+    margin-top: auto; /* Поставя футъра в долната част */
 }
+
 
 /* utilities start */
 .w-90 {

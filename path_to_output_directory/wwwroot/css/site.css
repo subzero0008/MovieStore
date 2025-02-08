@@ -1,12 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Гарантира, че body ще заема поне височината на екрана */
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    flex-grow: 1; /* Това позволява съдържанието да расте и да не се припокрива с футъра */
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -41,3 +45,13 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+/* Footer styling */
+footer {
+    margin-top: auto; /* Поставя футъра в долната част на страницата */
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(240, 240, 240);
+    font-size: 1rem;
+    text-align: right;
+    padding: 1% 2%;
+}

@@ -1,0 +1,53 @@
+﻿@model MovieStoreMvc.Models.ViewModels.ProfileViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<h1>Edit Profile</h1>
+
+<form asp-action="EditProfile" method="post" class="profile-form">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="UserName">Username</label>
+        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email Address</label>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="Name">Full Name</label>
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="CurrentPassword">Current Password</label>
+        @Html.PasswordFor(model => model.CurrentPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CurrentPassword, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="NewPassword">New Password </label>
+        @Html.PasswordFor(model => model.NewPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="ConfirmNewPassword">Confirm New Password</label>
+        @Html.PasswordFor(model => model.ConfirmNewPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ConfirmNewPassword, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-danger">Save Changes</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

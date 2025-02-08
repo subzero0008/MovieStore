@@ -35,14 +35,14 @@ label {
 }
 
 .input {
-    padding: 0 0.5rem;
-    border: 0;
-    box-shadow: 0 1px 3px 0 rgb(43, 43, 43);
-    font-size: 15px;
+    padding: 0.7rem 0.5rem;
+    border: 1px solid #ccc; /* Добавяне на граница за по-добро визуализиране */
+    font-size: 1rem;
     width: 100%;
     color: var(--primary-color);
     border-radius: 5px;
 }
+
 
 .alert {
     background-color: #ff4d4d; /* Червен цвят за визуализация на съобщенията за грешки */

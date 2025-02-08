@@ -40,10 +40,12 @@ namespace MovieStoreMvc.Repositories.Implementation
                 Email = model.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
                 UserName = model.Username,
-                Name = model.Name,
+                Name = string.IsNullOrEmpty(model.Name) ? "Default Name" : model.Name, // Стойност за Name
                 EmailConfirmed = true,
                 PhoneNumberConfirmed = true,
             };
+
+
 
             var result = await userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
@@ -80,7 +82,7 @@ namespace MovieStoreMvc.Repositories.Implementation
             if (!await userManager.CheckPasswordAsync(user, model.Password))
             {
                 status.StatusCode = 0;
-                status.Message = "Invalid Password";
+                status.Message = "Invalid password";
                 return status;
             }
 
@@ -120,5 +122,63 @@ namespace MovieStoreMvc.Repositories.Implementation
             await signInManager.SignOutAsync();
         }
 
+        public async Task<Status> UpdateUserRoleAsync(string userId, string newRole)
+        {
+            var status = new Status();
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                status.StatusCode = 0;
+                status.Message = "User not found";
+                return status;
+            }
+
+            var currentRoles = await userManager.GetRolesAsync(user);
+
+            // Пропускаме премахването на съществуващите роли, ако няма нужда.
+            if (!await roleManager.RoleExistsAsync(newRole))
+            {
+                await roleManager.CreateAsync(new IdentityRole(newRole));
+            }
+
+            var result = await userManager.AddToRoleAsync(user, newRole);
+            if (!result.Succeeded)
+            {
+                status.StatusCode = 0;
+                status.Message = "Error adding new role.";
+                return status;
+            }
+
+            status.StatusCode = 1;
+            status.Message = "User role updated successfully";
+            return status;
+        }
+
+
+        public async Task<Status> DeleteUserAsync(string userId)
+        {
+            var status = new Status();
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                status.StatusCode = 0;
+                status.Message = "User not found";
+                return status;
+            }
+
+            var result = await userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                status.StatusCode = 1;
+                status.Message = "User deleted successfully";
+            }
+            else
+            {
+                status.StatusCode = 0;
+                status.Message = "Failed to delete user";
+            }
+
+            return status;
+        }
     }
 }

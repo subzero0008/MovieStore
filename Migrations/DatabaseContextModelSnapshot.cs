@@ -238,7 +238,7 @@ namespace MovieStoreMvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genre", (string)null);
+                    b.ToTable("Genre");
                 });
 
             modelBuilder.Entity("MovieStoreMvc.Models.Domain.Movie", b =>
@@ -275,7 +275,7 @@ namespace MovieStoreMvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie", (string)null);
+                    b.ToTable("Movie");
                 });
 
             modelBuilder.Entity("MovieStoreMvc.Models.Domain.MovieGenre", b =>
@@ -294,7 +294,7 @@ namespace MovieStoreMvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MovieGenre", (string)null);
+                    b.ToTable("MovieGenre");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

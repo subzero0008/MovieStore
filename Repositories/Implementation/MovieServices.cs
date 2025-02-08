@@ -4,10 +4,10 @@ using MovieStoreMvc.Repositories.Abstract;
 
 namespace MovieStoreMvc.Repositories.Implementation
 {
-    public class MovieService : IMovieService
+    public class MovieServices : IMovieService
     {
         private readonly DatabaseContext ctx;
-        public MovieService(DatabaseContext ctx)
+        public MovieServices(DatabaseContext ctx)
         {
             this.ctx = ctx;
         }

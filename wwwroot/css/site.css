@@ -1,22 +1,26 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 10px; /* Може да намалите стойността, ако е възможно */
+    padding-bottom: 20px; /* Уверете се, че има малко пространство в долната част */
+    display: flex; /* Използваме Flexbox */
+    flex-direction: column; /* Разположение на елементите вертикално */
+    min-height: 100vh; /* Гарантира, че body ще заема поне височината на екрана */
 }
 
-/* Set padding to keep content from hitting the edges */
+/* Съдържание */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    flex-grow: 1; /* Това позволява на съдържанието да расте и да не се припокрива с футъра */
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+/* Настройки за формата */
 input,
 select,
 textarea {
     max-width: 280px;
 }
 
-/* styles for validation helpers */
+/* Стилове за валидиране */
 .field-validation-error {
     color: #b94a48;
 }
@@ -41,3 +45,11 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Поставя footer-а на дъното на страницата */
+}

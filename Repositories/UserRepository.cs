@@ -13,9 +13,10 @@ namespace MovieStoreMvc.Repositories.Implementation
             _dbContext = dbContext;
         }
 
-        public IQueryable<ApplicationUser> GetNonAdminUsers()
+        // Метод за вземане на всички потребители (без филтриране по роли)
+        public IQueryable<ApplicationUser> GetAllUsers()
         {
-            return _dbContext.Users.Where(u => !_dbContext.UserRoles.Any(ur => ur.UserId == u.Id && ur.RoleId == "adminRoleId"));
+            return _dbContext.Users; // Вземаме всички потребители без филтриране по роли
         }
     }
 }
