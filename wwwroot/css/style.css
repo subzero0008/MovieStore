@@ -28,12 +28,13 @@ body {
 }
 
 .logo {
-  letter-spacing: 0.25rem;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: rgb(25, 25, 25);
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #6a3093; 
 }
+
 .nav-link {
   list-style: none;
   display: flex;
@@ -262,3 +263,12 @@ footer {
     flex-basis: 96%;
   }
 }
+/* Корекция на стила за селектора на жанрове */
+select.form-control {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto; /* Автоматична височина вместо фиксирана */
+    overflow-y: auto; /* Скролбар при нужда */
+}
+
+

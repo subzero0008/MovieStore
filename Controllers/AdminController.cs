@@ -5,13 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 
 namespace MovieStoreMvc.Controllers
-{
+{    // Само потребители с роля "Owner" могат да достъпват този контролер
+
     [Authorize(Roles = "Owner")]
     public class AdminController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-
+        private readonly UserManager<ApplicationUser> _userManager; // Отговаря за управление на потребители (създаване, актуализиране, автентикация)
+        private readonly RoleManager<IdentityRole> _roleManager;// Отговаря за управление на роли (създаване, актуализиране, задаване на роли на потребители)
+        //Използването на readonly осигурява, че не можем случайно да презапишем тези зависимости с нови стойности след инициализацията им в конструктора.
         public AdminController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;

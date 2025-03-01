@@ -53,30 +53,36 @@ body {
   color: rgb(90, 90, 90);
 }
 
+    .nav-link li a:hover {
+        color: rgb(90, 90, 90);
+    }
+
+    .nav-link li {
+        position: relative; /* Добавено: фиксира позиционирането на менюто */
+    }
+
 .dropdown-nav-link {
-  position: absolute;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-color);
-  margin-top: 0.2rem;
-  min-width: 6.5rem;
-  transition: all 0.5s ease;
-  visibility: hidden;
-  padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-.dropdown-nav-link li a {
-  padding: 0.4rem 1rem;
-  display: block;
+    position: absolute;
+    list-style: none;
+    display: none; /* Променено: използваме display вместо visibility */
+    flex-direction: column;
+    background-color: var(--bg-color);
+    margin-top: 0; /* Променено: премахнато разстоянието, за да не изчезва при преместване на мишката */
+    min-width: 6.5rem;
+    transition: all 0.5s ease;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    z-index: 1000; /* Добавено: гарантира, че менюто ще е най-отгоре */
 }
 
+    .dropdown-nav-link li a {
+        padding: 0.4rem 1rem;
+        display: block;
+    }
+
 .nav-link li:hover > ul,
-.nav-link li:focus-within > ul,
-.nav-link li ul:hover,
-.nav-link li ul:focus {
-  visibility: visible;
+.nav-link li:focus-within > ul {
+    display: flex; /* Променено: показваме менюто правилно */
 }
 
 .container {
@@ -84,6 +90,7 @@ body {
     width: 100%;
     flex-grow: 1; /* Това позволява на съдържанието да расте и да запълни наличното пространство */
 }
+
 
 
 .search-bar{

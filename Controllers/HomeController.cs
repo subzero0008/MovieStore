@@ -15,25 +15,27 @@ namespace MovieStoreMvc.Controllers
         public IActionResult Index(string term = "", int currentPage = 1)
         {
             var movies = _movieService.List(term, true, currentPage);
-            if (movies == null)
+
+            // Проверяваме дали няма намерени резултати
+            if (movies.MovieList == null || !movies.MovieList.Any())
             {
-                
+                // Добавяме съобщение за няма резултати
+                ViewData["NoResultsMessage"] = "No movies found matching your search criteria.";
             }
+
             return View(movies);
         }
+            
 
         public IActionResult About()
         {
+            ViewData["Title"] = "About Us"; // Добавено, за да избегнем NullReferenceException
             return View();
         }
 
         public IActionResult MovieDetail(int movieId)
         {
             var movie = _movieService.GetById(movieId);
-            if (movie == null)
-            {
-                
-            }
             return View(movie);
         }
     }

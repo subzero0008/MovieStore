@@ -33,6 +33,8 @@ namespace MovieStoreMvc.Controllers
             if (currentUserRoles.Contains("Owner"))
             {
                 // Собственикът вижда всички потребители, освен тези с роля "Owner"
+                //Операторът => дефинира lambda израз, който указва как всеки елемент u от списъка users
+                //трябва да бъде обработен – в случая проверява дали не е в ролята "Owner".
                 users = users.Where(u => !_userManager.IsInRoleAsync(u, "Owner").Result).ToList();
             }
             else if (currentUserRoles.Contains("Admin"))
@@ -103,13 +105,6 @@ namespace MovieStoreMvc.Controllers
                 user.Name = model.Name;
 
                 // Проверка дали новата парола съвпада с текущата
-                if (!string.IsNullOrEmpty(model.NewPassword) && model.NewPassword == model.CurrentPassword)
-                {
-                    ModelState.AddModelError("NewPassword", "The new password cannot be the same as the current password.");
-                    return View(model);
-                }
-
-                // Промяна на паролата, ако е необходима
                 if (!string.IsNullOrEmpty(model.NewPassword) && model.NewPassword == model.ConfirmNewPassword)
                 {
                     var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
@@ -121,14 +116,20 @@ namespace MovieStoreMvc.Controllers
                         }
                         return View(model);  // Връщаме обратно с грешки
                     }
+
+                    TempData["SuccessMessage"] = "Your password has been changed successfully.";
+                    return RedirectToAction("EditProfile"); // Презареждане за да не останат старите данни
                 }
+
 
                 // Обновяване на потребителя
                 var updateResult = await _userManager.UpdateAsync(user);
 
                 if (updateResult.Succeeded)
                 {
-                    return RedirectToAction("EditProfile");  // Пренасочване към същата страница
+                    TempData["SuccessMessage"] = "Your profile has been updated successfully.";
+
+                    return RedirectToAction("EditProfile");  // Пренасочване към същата страница    
                 }
                 else
                 {
@@ -140,7 +141,7 @@ namespace MovieStoreMvc.Controllers
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Някои от данните не са валидни. Моля, проверете и опитайте отново.");
+                ModelState.AddModelError(string.Empty, "Some of the data is invalid, please try again.");
             }
 
             return View(model); // Връщаме формата с грешки

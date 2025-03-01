@@ -8,11 +8,13 @@ using System.Linq;
 namespace MovieStoreMvc.Controllers
 {
     [Authorize]
+
     public class MovieController : Controller
     {
         private readonly IMovieService _movieService;
         private readonly IFileService _fileService;
         private readonly IGenreService _genreService;
+        // Конструкторът приема зависимости чрез DI (Dependency Injection)
 
         public MovieController(IGenreService genreService, IMovieService movieService, IFileService fileService)
         {
@@ -20,6 +22,7 @@ namespace MovieStoreMvc.Controllers
             _fileService = fileService;
             _genreService = genreService;
         }
+        // Метод за показване на формата за добавяне на нов филм
 
         public IActionResult Add()
         {
@@ -29,10 +32,12 @@ namespace MovieStoreMvc.Controllers
             };
             return View(model);
         }
+        // Метод за обработка на POST заявката при добавяне на нов филм
 
         [HttpPost]
         public IActionResult Add(Movie model)
-        {
+        {            // Зарежда жанровете отново, за да се покажат правилно при грешка във валидацията
+
             model.GenreList = _genreService.List().Select(a => new SelectListItem { Text = a.GenreName, Value = a.Id.ToString() });
             if (!ModelState.IsValid)
                 return View(model);
@@ -47,6 +52,7 @@ namespace MovieStoreMvc.Controllers
                 }
                 model.MovieImage = fileResult.Item2;
             }
+            // Запазва филма в базата данни
 
             var result = _movieService.Add(model);
             if (result)
@@ -60,26 +66,51 @@ namespace MovieStoreMvc.Controllers
                 return View(model);
             }
         }
+        // Метод за зареждане на формата за редактиране на съществуващ филм
 
         public IActionResult Edit(int id)
         {
             var model = _movieService.GetById(id);
             var selectedGenres = _movieService.GetGenreByMovieId(model.Id);
-            var multiGenreList = new MultiSelectList(_genreService.List(), "Id", "GenreName", selectedGenres);
-            model.MultiGenreList = multiGenreList;
+
+            // Зареждаме списъка с жанровете
+            var genreList = _genreService.List().Select(a => new SelectListItem
+            {
+                Text = a.GenreName,
+                Value = a.Id.ToString()
+            }).ToList();
+
+            // Създаваме MultiSelectList, която да съдържа избраните жанрове
+            model.MultiGenreList = new MultiSelectList(genreList, "Value", "Text", selectedGenres);
+
             return View(model);
         }
+
 
         [HttpPost]
         public IActionResult Edit(Movie model)
         {
-            var selectedGenres = _movieService.GetGenreByMovieId(model.Id);
+            // Ако редактираме филм, премахваме задължителните полета за ImageFile и Genres
+            if (model.Id > 0) // Ако е редакция
+            {
+                ModelState.Remove("ImageFile");  // Премахваме задължителност за изображението
+                ModelState.Remove("Genres");    // Премахваме задължителност за жанровете
+            }
+
+            var selectedGenres = model.Genres;
             var multiGenreList = new MultiSelectList(_genreService.List(), "Id", "GenreName", selectedGenres);
             model.MultiGenreList = multiGenreList;
+
             if (!ModelState.IsValid)
                 return View(model);
 
-            if (model.ImageFile != null)
+            // Ако не е качено ново изображение, запазваме старото
+            var existingMovie = _movieService.GetById(model.Id);
+            if (model.ImageFile == null)
+            {
+                model.MovieImage = existingMovie.MovieImage;
+            }
+            else
             {
                 var fileResult = _fileService.SaveImage(model.ImageFile);
                 if (fileResult.Item1 == 0)
@@ -90,6 +121,7 @@ namespace MovieStoreMvc.Controllers
                 model.MovieImage = fileResult.Item2;
             }
 
+            // Актуализираме филма
             var result = _movieService.Update(model);
             if (result)
             {
@@ -102,6 +134,8 @@ namespace MovieStoreMvc.Controllers
                 return View(model);
             }
         }
+
+
 
         public IActionResult MovieList()
         {

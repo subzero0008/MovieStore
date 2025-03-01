@@ -106,30 +106,53 @@ namespace MovieStoreMvc.Repositories.Implementation
         {
             try
             {
-                var genresToDeleted = ctx.MovieGenre.Where(a => a.MovieId == model.Id && !model.Genres.Contains(a.GenreId)).ToList();
-                foreach (var mGenre in genresToDeleted)
+                // Актуализиране на жанровете
+                var genresToDelete = ctx.MovieGenre.Where(a => a.MovieId == model.Id && !model.Genres.Contains(a.GenreId)).ToList();
+                foreach (var genre in genresToDelete)
                 {
-                    ctx.MovieGenre.Remove(mGenre);
+                    ctx.MovieGenre.Remove(genre);
                 }
-                foreach (int genId in model.Genres)
+
+                // Добавяне на новите жанрове
+                foreach (int genreId in model.Genres)
                 {
-                    var movieGenre = ctx.MovieGenre.FirstOrDefault(a => a.MovieId == model.Id && a.GenreId == genId);
-                    if (movieGenre == null)
+                    var existingGenre = ctx.MovieGenre.FirstOrDefault(a => a.MovieId == model.Id && a.GenreId == genreId);
+                    if (existingGenre == null)
                     {
-                        movieGenre = new MovieGenre { GenreId = genId, MovieId = model.Id };
+                        var movieGenre = new MovieGenre
+                        {
+                            MovieId = model.Id,
+                            GenreId = genreId
+                        };
                         ctx.MovieGenre.Add(movieGenre);
                     }
                 }
 
-                ctx.Movie.Update(model);
+                // Актуализиране на филма (провери дали има промени)
+                var existingMovie = ctx.Movie.Find(model.Id);
+                if (existingMovie != null)
+                {
+                    // Обновяване на другите полета на филма (ако има промени)
+                    existingMovie.Title = model.Title;
+                    existingMovie.ReleaseYear = model.ReleaseYear;
+                    existingMovie.MovieImage = model.MovieImage;
+                    existingMovie.Cast = model.Cast;
+                    existingMovie.Director = model.Director;
+                    existingMovie.Synopsis = model.Synopsis;
+                    existingMovie.PlaceToShow = model.PlaceToShow;
+                }
+
                 ctx.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                // Логиране на грешката, ако има такава
+                Console.WriteLine($"Error: {ex.Message}");
                 return false;
             }
         }
+
 
         public List<int> GetGenreByMovieId(int movieId)
         {

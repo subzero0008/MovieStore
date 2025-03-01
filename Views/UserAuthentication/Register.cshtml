@@ -4,6 +4,20 @@
 
 <h2>Registration</h2>
 
+<!-- Note for Role selection -->
+<div class="alert alert-info">
+    <strong>Note:</strong> Role selection in this registration form is provided for convenience and testing purposes.
+    In the actual application, roles are controlled by administrators through the user management section.
+</div>
+
+<!-- Display error message if exists -->
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
 <form asp-action="Register" method="post">
     <div>
         <label asp-for="Name">Name:</label>
@@ -30,6 +44,16 @@
         <input asp-for="PasswordConfirm" type="password" />
         <span asp-validation-for="PasswordConfirm"></span>
     </div>
-    <input type="hidden" asp-for="Role" value="User" />
+
+    <!-- Dropdown for role selection -->
+    <div>
+        <label asp-for="Role">Role:</label>
+        <select asp-for="Role">
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+        </select>
+        <span asp-validation-for="Role"></span>
+    </div>
+
     <button type="submit">Register</button>
 </form>

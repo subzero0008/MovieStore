@@ -1,267 +1,287 @@
 {
   "Files": [
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\016b79cc-7409-49c1-b18a-63db494ef16e.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\016b79cc-7409-49c1-b18a-63db494ef16e.jpg",
       "PackagePath": "staticwebassets\\Uploads\\016b79cc-7409-49c1-b18a-63db494ef16e.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\123ae954-bd96-4380-b8a3-a3bba8129050.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\123ae954-bd96-4380-b8a3-a3bba8129050.jpg",
       "PackagePath": "staticwebassets\\Uploads\\123ae954-bd96-4380-b8a3-a3bba8129050.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\1761ff16-f0c8-4f97-ab48-0d419817314b.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\1761ff16-f0c8-4f97-ab48-0d419817314b.jpg",
       "PackagePath": "staticwebassets\\Uploads\\1761ff16-f0c8-4f97-ab48-0d419817314b.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\1d3e1456-ff4a-465c-916d-66125279ba63.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\1d3e1456-ff4a-465c-916d-66125279ba63.jpg",
       "PackagePath": "staticwebassets\\Uploads\\1d3e1456-ff4a-465c-916d-66125279ba63.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\22d29140-2989-4cbd-bec8-1a6ce9e0d17f.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\22d29140-2989-4cbd-bec8-1a6ce9e0d17f.jpg",
       "PackagePath": "staticwebassets\\Uploads\\22d29140-2989-4cbd-bec8-1a6ce9e0d17f.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\242ea81e-7e9f-46ba-82c7-ba3a04a55112.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\242ea81e-7e9f-46ba-82c7-ba3a04a55112.jpg",
       "PackagePath": "staticwebassets\\Uploads\\242ea81e-7e9f-46ba-82c7-ba3a04a55112.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\271e2503-51ea-43d8-bc28-f4479b9e5514.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\271e2503-51ea-43d8-bc28-f4479b9e5514.jpg",
       "PackagePath": "staticwebassets\\Uploads\\271e2503-51ea-43d8-bc28-f4479b9e5514.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\2a6cf62e-b453-4f58-9e55-bea3e0fbfb64.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\2a6cf62e-b453-4f58-9e55-bea3e0fbfb64.jpg",
       "PackagePath": "staticwebassets\\Uploads\\2a6cf62e-b453-4f58-9e55-bea3e0fbfb64.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\315f7fb8-8178-4e91-b42b-e923135541d6.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\315f7fb8-8178-4e91-b42b-e923135541d6.jpg",
       "PackagePath": "staticwebassets\\Uploads\\315f7fb8-8178-4e91-b42b-e923135541d6.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\47573d35-fbdc-4e46-a5f9-f17dbffd5090.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\47573d35-fbdc-4e46-a5f9-f17dbffd5090.jpg",
       "PackagePath": "staticwebassets\\Uploads\\47573d35-fbdc-4e46-a5f9-f17dbffd5090.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\49bb5308-8310-4efe-97a1-db57500e801f.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\49bb5308-8310-4efe-97a1-db57500e801f.jpg",
       "PackagePath": "staticwebassets\\Uploads\\49bb5308-8310-4efe-97a1-db57500e801f.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\5064331b-639c-4669-9999-5d4b32db4c85.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\5064331b-639c-4669-9999-5d4b32db4c85.jpg",
       "PackagePath": "staticwebassets\\Uploads\\5064331b-639c-4669-9999-5d4b32db4c85.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\5460db21-fdfb-4b96-af7a-4c2a1eacd4b5.png",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\5460db21-fdfb-4b96-af7a-4c2a1eacd4b5.png",
       "PackagePath": "staticwebassets\\Uploads\\5460db21-fdfb-4b96-af7a-4c2a1eacd4b5.png"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\56b917a8-f474-4862-9c84-d447405f158a.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\56b917a8-f474-4862-9c84-d447405f158a.jpg",
       "PackagePath": "staticwebassets\\Uploads\\56b917a8-f474-4862-9c84-d447405f158a.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\5b690c45-b05d-46fc-af99-9c0c870bdd7b.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\5b690c45-b05d-46fc-af99-9c0c870bdd7b.jpg",
       "PackagePath": "staticwebassets\\Uploads\\5b690c45-b05d-46fc-af99-9c0c870bdd7b.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\6ae68018-83a5-4dcd-9071-a3a5f0e251ca.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\6ae68018-83a5-4dcd-9071-a3a5f0e251ca.jpg",
       "PackagePath": "staticwebassets\\Uploads\\6ae68018-83a5-4dcd-9071-a3a5f0e251ca.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\72099fe5-5a22-4e41-be9e-48948c545d97.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\72099fe5-5a22-4e41-be9e-48948c545d97.jpg",
       "PackagePath": "staticwebassets\\Uploads\\72099fe5-5a22-4e41-be9e-48948c545d97.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\7d9aa61c-6d33-4d6e-b993-46e497a46745.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\7d9aa61c-6d33-4d6e-b993-46e497a46745.jpg",
       "PackagePath": "staticwebassets\\Uploads\\7d9aa61c-6d33-4d6e-b993-46e497a46745.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\81220490-0310-42c1-8560-2a185d50cbf4.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\81220490-0310-42c1-8560-2a185d50cbf4.jpg",
       "PackagePath": "staticwebassets\\Uploads\\81220490-0310-42c1-8560-2a185d50cbf4.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\854489c2-397e-447a-97c7-73b7606fdfe9.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\854489c2-397e-447a-97c7-73b7606fdfe9.jpg",
       "PackagePath": "staticwebassets\\Uploads\\854489c2-397e-447a-97c7-73b7606fdfe9.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\88529cea-0366-41e6-8ba0-6215b5fc9bed.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\88529cea-0366-41e6-8ba0-6215b5fc9bed.jpg",
       "PackagePath": "staticwebassets\\Uploads\\88529cea-0366-41e6-8ba0-6215b5fc9bed.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\8b1a1d0f-566a-439c-9267-03b9dc9e14a0.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\8b1a1d0f-566a-439c-9267-03b9dc9e14a0.jpg",
       "PackagePath": "staticwebassets\\Uploads\\8b1a1d0f-566a-439c-9267-03b9dc9e14a0.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\8bfcb5b9-3069-4c21-8ace-1dbf367acc78.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\8bfcb5b9-3069-4c21-8ace-1dbf367acc78.jpg",
       "PackagePath": "staticwebassets\\Uploads\\8bfcb5b9-3069-4c21-8ace-1dbf367acc78.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\901a7bea-3ec7-4b90-9fc8-5d7a52a385ea.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\8d255f50-86a0-473b-a6f0-84b12654ddbd.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\8d255f50-86a0-473b-a6f0-84b12654ddbd.jpg"
+    },
+    {
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\901a7bea-3ec7-4b90-9fc8-5d7a52a385ea.jpg",
       "PackagePath": "staticwebassets\\Uploads\\901a7bea-3ec7-4b90-9fc8-5d7a52a385ea.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\921853f1-8eee-45a3-a43e-471c2d1ac214.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\921853f1-8eee-45a3-a43e-471c2d1ac214.jpg",
       "PackagePath": "staticwebassets\\Uploads\\921853f1-8eee-45a3-a43e-471c2d1ac214.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\9e72c80c-7030-4d59-b673-c38a92fe903f.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\9e72c80c-7030-4d59-b673-c38a92fe903f.jpg",
       "PackagePath": "staticwebassets\\Uploads\\9e72c80c-7030-4d59-b673-c38a92fe903f.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\a294da80-1362-4c02-bb92-c781d2a19da2.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\a294da80-1362-4c02-bb92-c781d2a19da2.jpg",
       "PackagePath": "staticwebassets\\Uploads\\a294da80-1362-4c02-bb92-c781d2a19da2.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\aaec65dd-b99b-4eed-992e-dcdf32dc96a7.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\aaec65dd-b99b-4eed-992e-dcdf32dc96a7.jpg",
       "PackagePath": "staticwebassets\\Uploads\\aaec65dd-b99b-4eed-992e-dcdf32dc96a7.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\b7185ffe-7b9f-49be-a99f-f4f5d7c250da.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\b7185ffe-7b9f-49be-a99f-f4f5d7c250da.jpg",
       "PackagePath": "staticwebassets\\Uploads\\b7185ffe-7b9f-49be-a99f-f4f5d7c250da.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\c3e4bd16-1dc3-4e42-aa81-9ffc70adc952.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\c3e4bd16-1dc3-4e42-aa81-9ffc70adc952.jpg",
       "PackagePath": "staticwebassets\\Uploads\\c3e4bd16-1dc3-4e42-aa81-9ffc70adc952.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\c434862f-2cb6-4959-929b-bf9b01f2a953.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\c434862f-2cb6-4959-929b-bf9b01f2a953.jpg",
       "PackagePath": "staticwebassets\\Uploads\\c434862f-2cb6-4959-929b-bf9b01f2a953.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\c55d39cc-f97c-45b5-ba4a-fa8eeca4dd7e.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\c55d39cc-f97c-45b5-ba4a-fa8eeca4dd7e.jpg",
       "PackagePath": "staticwebassets\\Uploads\\c55d39cc-f97c-45b5-ba4a-fa8eeca4dd7e.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\d6f18514-28ee-457a-8903-1585e160f735.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\d501e9f8-b84e-45b7-8f89-765817ededc4.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\d501e9f8-b84e-45b7-8f89-765817ededc4.jpg"
+    },
+    {
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\d6f18514-28ee-457a-8903-1585e160f735.jpg",
       "PackagePath": "staticwebassets\\Uploads\\d6f18514-28ee-457a-8903-1585e160f735.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\da197a7a-3f35-4dcc-a56c-7ba9e0b6ee44.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\da197a7a-3f35-4dcc-a56c-7ba9e0b6ee44.jpg",
       "PackagePath": "staticwebassets\\Uploads\\da197a7a-3f35-4dcc-a56c-7ba9e0b6ee44.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\dbffce8f-bbd2-41f8-8748-b271bbc118a9.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\dbffce8f-bbd2-41f8-8748-b271bbc118a9.jpg",
       "PackagePath": "staticwebassets\\Uploads\\dbffce8f-bbd2-41f8-8748-b271bbc118a9.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\ec7ec338-003e-45a3-bf1a-400a2db47f46.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\ec7ec338-003e-45a3-bf1a-400a2db47f46.jpg",
       "PackagePath": "staticwebassets\\Uploads\\ec7ec338-003e-45a3-bf1a-400a2db47f46.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\f6132833-f4f6-4df5-bac4-707c94762f6a.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\f6132833-f4f6-4df5-bac4-707c94762f6a.jpg",
       "PackagePath": "staticwebassets\\Uploads\\f6132833-f4f6-4df5-bac4-707c94762f6a.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\f67ab0ad-7139-448a-9f2f-93d274f52e1e.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\f67ab0ad-7139-448a-9f2f-93d274f52e1e.jpg",
       "PackagePath": "staticwebassets\\Uploads\\f67ab0ad-7139-448a-9f2f-93d274f52e1e.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\Uploads\\fad38bd7-64a6-41f0-8f14-357a1a4ad35e.jpg",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\fad38bd7-64a6-41f0-8f14-357a1a4ad35e.jpg",
       "PackagePath": "staticwebassets\\Uploads\\fad38bd7-64a6-41f0-8f14-357a1a4ad35e.jpg"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\css\\forms.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\css\\about.css",
+      "PackagePath": "staticwebassets\\css\\about.css"
+    },
+    {
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\css\\forms.css",
       "PackagePath": "staticwebassets\\css\\forms.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\css\\site.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\css\\style.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\js\\site.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

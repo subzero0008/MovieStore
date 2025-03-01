@@ -6,6 +6,15 @@
 
 <h1>Edit Profile</h1>
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+
+
 <form asp-action="EditProfile" method="post" class="profile-form">
     @Html.AntiForgeryToken()
 

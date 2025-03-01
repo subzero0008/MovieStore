@@ -27,12 +27,12 @@ namespace MovieStoreMvc.Models.Domain
 
         public string? PlaceToShow { get; set; } = string.Empty;
 
+        // Премахваме Required атрибута, за да не бъде задължително при редактиране
         [NotMapped]
-        [Required(ErrorMessage = "Image is required")]  
         public IFormFile? ImageFile { get; set; }
 
+        // Премахваме Required атрибута за Genres, за да не бъде задължително при редактиране
         [NotMapped]
-        [Required(ErrorMessage = "At least one genre must be selected")]
         public List<int>? Genres { get; set; } = new List<int>();
 
         [NotMapped]

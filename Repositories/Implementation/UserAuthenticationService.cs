@@ -27,14 +27,26 @@ namespace MovieStoreMvc.Repositories.Implementation
         public async Task<Status> RegisterAsync(RegistrationModel model)
         {
             var status = new Status();
+
+            // Проверка за съществуващ потребител с това потребителско име
             var userExists = await userManager.FindByNameAsync(model.Username);
             if (userExists != null)
             {
                 status.StatusCode = 0;
-                status.Message = "User already exists";
+                status.Message = "Username already taken";
                 return status;
             }
 
+            // Проверка за съществуващ потребител с този имейл
+            var emailExists = await userManager.FindByEmailAsync(model.Email);
+            if (emailExists != null)
+            {
+                status.StatusCode = 0;
+                status.Message = "Email already registered";
+                return status;
+            }
+
+            // Създаване на новия потребител
             ApplicationUser user = new ApplicationUser()
             {
                 Email = model.Email,
@@ -45,8 +57,7 @@ namespace MovieStoreMvc.Repositories.Implementation
                 PhoneNumberConfirmed = true,
             };
 
-
-
+            // Създаване на потребителя
             var result = await userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
             {
@@ -55,9 +66,14 @@ namespace MovieStoreMvc.Repositories.Implementation
                 return status;
             }
 
+            // Проверка за съществуването на ролята
             if (!await roleManager.RoleExistsAsync(model.Role))
+            {
+                // Ако ролята не съществува, я създаваме
                 await roleManager.CreateAsync(new IdentityRole(model.Role));
+            }
 
+            // Добавяме ролята към потребителя
             if (await roleManager.RoleExistsAsync(model.Role))
             {
                 await userManager.AddToRoleAsync(user, model.Role);
@@ -67,6 +83,8 @@ namespace MovieStoreMvc.Repositories.Implementation
             status.Message = "You have registered successfully";
             return status;
         }
+
+
 
         public async Task<Status> LoginAsync(LoginModel model)
         {

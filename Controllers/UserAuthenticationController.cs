@@ -26,12 +26,23 @@ namespace MovieStoreMvc.Controllers
             if (!ModelState.IsValid)
                 return View(model);
 
+            // Ако не е избрана роля, задаваме по подразбиране "User"
+            if (string.IsNullOrEmpty(model.Role))
+            {
+                model.Role = "User"; // Може да зададеш друга роля по подразбиране, ако искаш.
+            }
+
             var result = await authService.RegisterAsync(model);
+
+            // Проверка на резултата и добавяне на съобщения в TempData
             if (result.StatusCode == 1)
+            {
+                TempData["SuccessMessage"] = result.Message;  // Съобщение за успешна регистрация
                 return RedirectToAction("Login");
+            }
             else
             {
-                TempData["msg"] = result.Message;
+                TempData["ErrorMessage"] = result.Message;  // Съобщение за грешка
                 return View(model);
             }
         }
@@ -53,15 +64,15 @@ namespace MovieStoreMvc.Controllers
                 return RedirectToAction("Index", "Home");
             else
             {
-                TempData["msg"] = "Could not log in..";
+                TempData["ErrorMessage"] = "Could not log in..";  // Съобщение за неуспешен вход
                 return RedirectToAction(nameof(Login));
             }
         }
+
         public async Task<IActionResult> Logout()
         {
             await authService.LogoutAsync();
             return RedirectToAction(nameof(Login));
         }
-
     }
 }

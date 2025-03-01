@@ -64,7 +64,7 @@
     <!-- Genres -->
     <div class="input-container">
         <label asp-for="Genres" class="w-40">Genres</label>
-        <select asp-for="Genres" asp-items="Model.GenreList" multiple="multiple" class="form-control"></select>
+        <select asp-for="Genres" asp-items="Model.MultiGenreList" multiple="multiple" class="form-control"></select>
         <span asp-validation-for="Genres" class="text-danger"></span>
     </div>
 

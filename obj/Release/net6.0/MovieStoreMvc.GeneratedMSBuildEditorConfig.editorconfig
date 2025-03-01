@@ -52,16 +52,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcTW92aWVMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Movies/MovieStoremvc/MovieStoreMvc/Views/Movie/_ValidationSummary.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcX1ZhbGlkYXRpb25TdW1tYXJ5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Movies/MovieStoremvc/MovieStoreMvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Movies/MovieStoremvc/MovieStoreMvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Movies/MovieStoremvc/MovieStoreMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Movies/MovieStoremvc/MovieStoreMvc/Views/Shared/_ValidationSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU3VtbWFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Movies/MovieStoremvc/MovieStoreMvc/Views/UserAuthentication/Login.cshtml]
@@ -78,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Movies/MovieStoremvc/MovieStoreMvc/Views/UserManagement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Movies/MovieStoremvc/MovieStoreMvc/Views/UserManagement/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcRWRpdFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Movies/MovieStoremvc/MovieStoreMvc/Views/UserManagement/Index.cshtml]

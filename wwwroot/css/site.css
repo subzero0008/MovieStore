@@ -15,10 +15,18 @@
 
 /* Настройки за формата */
 input,
-select,
 textarea {
     max-width: 280px;
 }
+
+/* Специално за полето за жанрове и други multi-select полета */
+select.form-control {
+    max-width: 100%;
+    min-width: 300px;
+    height: 200px;
+    overflow-y: auto; /* Добавя скролбар при нужда */
+}
+
 
 /* Стилове за валидиране */
 .field-validation-error {

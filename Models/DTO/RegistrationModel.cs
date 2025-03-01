@@ -6,9 +6,8 @@ namespace MovieStoreMvc.Models.DTO
     {
         [Required]
         public string Name { get; set; }
-
         [Required]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Invalid email format")] // Автоматична проверка на формата
         public string Email { get; set; }
 
         [Required]

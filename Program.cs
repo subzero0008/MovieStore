@@ -52,8 +52,8 @@ using (var scope = app.Services.CreateScope())
     }
 
     // Създаване на Owner (ако няма такъв)
-    string ownerEmail = "owner@example.com"; // Промени с реален имейл
-    string ownerPassword = "Owner@123"; // Промени с надеждна парола
+    string ownerEmail = "owner@example.com"; 
+    string ownerPassword = "Owner@123"; 
     var ownerUser = await userManager.FindByEmailAsync(ownerEmail);
     if (ownerUser == null)
     {
