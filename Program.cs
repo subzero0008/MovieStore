@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Repositories.Abstract;
 using MovieStoreMvc.Repositories.Implementation;
+using Npgsql.EntityFrameworkCore.PostgreSQL; // добавена директива
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +13,10 @@ builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IMovieService, MovieServices>();
 
-// Променяй UseSqlServer на UseNpgsql за PostgreSQL
+// Променяме UseSqlServer на UseNpgsql
 builder.Services.AddDbContext<DatabaseContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Използваме UseNpgsql
 
-// Добавяне на Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<DatabaseContext>()
     .AddDefaultTokenProviders();
