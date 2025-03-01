@@ -14,13 +14,13 @@ builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IMovieService, MovieServices>();
 
-// Четене на връзката към базата данни от променливата за средата (DATABASE_URL)
-var connectionString = Environment.GetEnvironmentVariable("postgresql://postgres:ZqBQKnoYDNiOPlmcWKVIzfGNrJRnBPle@crossover.proxy.rlwy.net:42199/railway");
+var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
 
 if (string.IsNullOrEmpty(connectionString))
 {
     throw new InvalidOperationException("DATABASE_URL environment variable is not set.");
 }
+
 
 // Конвертиране на PostgreSQL URI към правилен формат за Npgsql
 connectionString = connectionString.Replace("postgres://", "Host=")
