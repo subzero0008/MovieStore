@@ -1,5 +1,4 @@
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\appsettings.Development.json
-D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\appsettings.json
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\MovieStoreMvc.staticwebassets.runtime.json
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\MovieStoreMvc.exe
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\MovieStoreMvc.deps.json
@@ -256,3 +255,5 @@ D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\path_to_output_directory\
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\path_to_output_directory\published\bundleconfig.json
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\path_to_output_directory\published\MovieStoreMvc.deps.json
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\path_to_output_directory\published\MovieStoreMvc.runtimeconfig.json
+D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\Npgsql.dll
+D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

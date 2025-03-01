@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\MovieStoreMvc.csproj": {}
+    "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\MovieStoreMvc.csproj": {}
   },
   "projects": {
-    "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\MovieStoreMvc.csproj": {
+    "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\MovieStoreMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\MovieStoreMvc.csproj",
+        "projectUniqueName": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\MovieStoreMvc.csproj",
         "projectName": "MovieStoreMvc",
-        "projectPath": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\MovieStoreMvc.csproj",
+        "projectPath": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\MovieStoreMvc.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Movies\\MovieStoremvc\\MovieStoreMvc\\obj\\",
+        "outputPath": "D:\\movies\\MovieStoreMvc\\MovieStoreMvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
