@@ -15,7 +15,7 @@ builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IMovieService, MovieServices>();
 
 // Четене на връзката към базата данни от променливата за средата (DATABASE_URL)
-var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+var connectionString = Environment.GetEnvironmentVariable("postgresql://postgres:ZqBQKnoYDNiOPlmcWKVIzfGNrJRnBPle@crossover.proxy.rlwy.net:42199/railway");
 
 if (string.IsNullOrEmpty(connectionString))
 {
