@@ -11,9 +11,12 @@ builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IMovieService, MovieServices>();
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
 
-// Добавя се в контейнера на услугите
+// РџСЂРѕРјРµРЅСЏР№ UseSqlServer РЅР° UseNpgsql Р·Р° PostgreSQL
+builder.Services.AddDbContext<DatabaseContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Р”РѕР±Р°РІСЏРЅРµ РЅР° Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<DatabaseContext>()
     .AddDefaultTokenProviders();
@@ -36,7 +39,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Създаване на роли
 using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
@@ -51,7 +53,6 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
-    // Създаване на Owner (ако няма такъв)
     string ownerEmail = "owner@example.com"; 
     string ownerPassword = "Owner@123"; 
     var ownerUser = await userManager.FindByEmailAsync(ownerEmail);
@@ -61,7 +62,7 @@ using (var scope = app.Services.CreateScope())
         {
             UserName = "ownerUsername",
             Email = ownerEmail,
-            Name = "Default Name" // Уверяваме се, че свойството Name има стойност
+            Name = "Default Name" 
         };
 
         var createOwnerResult = await userManager.CreateAsync(newOwner, ownerPassword);
