@@ -5,7 +5,7 @@ EXPOSE 80
 # Използвай официалния .NET образ за изграждане
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["MovieStoreMvc/MovieStoreMvc.csproj", "MovieStoreMvc/"]
+COPY ["MovieStoreMvc.csproj", "MovieStoreMvc/"]
 RUN dotnet restore "MovieStoreMvc/MovieStoreMvc.csproj"
 COPY . .
 WORKDIR "/src/MovieStoreMvc"
