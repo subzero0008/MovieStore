@@ -14,19 +14,32 @@ builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IMovieService, MovieServices>();
 
-var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+// Конфигуриране на DATABASE_URL от appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 if (string.IsNullOrEmpty(connectionString))
 {
-    throw new InvalidOperationException("DATABASE_URL environment variable is not set.");
+    throw new ArgumentNullException(nameof(connectionString), "Connection string is missing!");
 }
 
+if (connectionString.StartsWith("postgresql://"))
+{
+    var databaseUri = new Uri(connectionString);
+    var userInfo = databaseUri.UserInfo.Split(':');
 
-// Конвертиране на PostgreSQL URI към правилен формат за Npgsql
-connectionString = connectionString.Replace("postgres://", "Host=")
-                                   .Replace("@", ";Username=")
-                                   .Replace(":", ";Password=")
-                                   .Replace("/", ";Database=");
+    // Добавяне на порт (5432) ако не е посочен
+    int port = databaseUri.Port != -1 ? databaseUri.Port : 5432;
+
+    connectionString = $"Host={databaseUri.Host};Port={port};Database={databaseUri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Require;Trust Server Certificate=true;";
+}
+
+Console.WriteLine($"Using Connection String: {connectionString}");
+
+// Добавяне на контекста за Entity Framework
+builder.Services.AddDbContext<DatabaseContext>(options =>
+    options.UseNpgsql(connectionString));
+
+
 
 // Добавяне на контекста за Entity Framework
 builder.Services.AddDbContext<DatabaseContext>(options =>

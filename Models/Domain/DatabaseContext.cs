@@ -1,19 +1,28 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MovieStoreMvc.Models.Domain;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
-namespace MovieStoreMvc.Models.Domain
+
+public class DatabaseContext : IdentityDbContext<ApplicationUser>
 {
-    public class DatabaseContext : IdentityDbContext<ApplicationUser>
+    private readonly string _connectionString;
+
+    // Използване на инжектиране на зависимости
+    public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration) : base(options)
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        _connectionString = configuration.GetConnectionString("DefaultConnection");
+    }
+
+    public DbSet<Genre> Genre { get; set; }
+    public DbSet<MovieGenre> MovieGenre { get; set; }
+    public DbSet<Movie> Movie { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
         {
-
+            optionsBuilder.UseNpgsql(_connectionString);
         }
-
-        public DbSet<Genre> Genre { get; set; }
-        public DbSet<MovieGenre> MovieGenre { get; set; }
-        public DbSet<Movie> Movie { get; set; }
     }
 }
-//контекст за връзка с базата данни в приложението
-//IdentityDbContext, ASP.NET Core Identity автоматично генерира необходимите таблици за потребителите, ролите, претензиите и други свързани данни.
