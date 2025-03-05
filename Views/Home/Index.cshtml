@@ -25,7 +25,8 @@
     {
         <div class="movie-card" onclick="window.location.href='/Home/MovieDetail?movieId=@movie.Id'">
             <div class="movie-image">
-                <img src="/Uploads/@movie.MovieImage" alt="@movie.Title">
+                <!-- Използваме Cloudinary URL тук -->
+                <img src="@movie.MovieImage" alt="@movie.Title">
             </div>
             <div class="movie-info">
                 <h4>@movie.Title</h4>

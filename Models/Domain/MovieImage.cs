@@ -10,7 +10,8 @@ namespace MovieStoreMvc.Models.Domain
         [Required]
         public int MovieId { get; set; }
 
-        public string ImagePath { get; set; } = string.Empty;
+        // Правим ImagePath nullable, защото може да няма изображение
+        public string? ImagePath { get; set; }
 
         [ForeignKey("MovieId")]
         public virtual Movie Movie { get; set; } // Навигационен обект към Movie

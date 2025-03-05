@@ -4,19 +4,16 @@
 <form class="w-40" asp-action="Add" method="post" enctype="multipart/form-data">
     <h2 class="pb-10">Add Movie</h2>
 
-   
     <div class="validation-summary-errors">
         <partial name="_ValidationSummary" />
     </div>
 
-    
     <div class="input-container">
         <label asp-for="Title" class="w-40">Title</label>
         <input type="text" class="input" asp-for="Title">
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
 
-    
     <div class="input-container">
         <label asp-for="ReleaseYear" class="w-40">Release Year</label>
         <input type="text" class="input" asp-for="ReleaseYear">
@@ -29,35 +26,30 @@
         <span asp-validation-for="ImageFile" class="text-danger"></span>
     </div>
 
-    
     <div class="input-container">
         <label asp-for="Cast" class="w-40">Cast</label>
         <input type="text" class="input" asp-for="Cast">
         <span asp-validation-for="Cast" class="text-danger"></span>
     </div>
 
-    <!-- Director -->
     <div class="input-container">
         <label asp-for="Director" class="w-40">Director</label>
         <input type="text" class="input" asp-for="Director">
         <span asp-validation-for="Director" class="text-danger"></span>
     </div>
 
-    <!-- Synopsis -->
     <div class="input-container">
         <label asp-for="Synopsis" class="w-40">Synopsis</label>
         <input type="text" class="input" asp-for="Synopsis">
         <span asp-validation-for="Synopsis" class="text-danger"></span>
     </div>
 
-    <!-- Place to Show -->
     <div class="input-container">
         <label asp-for="PlaceToShow" class="w-40">Place To Show</label>
         <input type="text" class="input" asp-for="PlaceToShow">
         <span asp-validation-for="PlaceToShow" class="text-danger"></span>
     </div>
 
-    <!-- Genres -->
     <div class="input-container">
         <label asp-for="Genres" class="w-40">Genres</label>
         <select asp-for="Genres" asp-items="Model.GenreList" multiple="multiple" class="form-control"></select>

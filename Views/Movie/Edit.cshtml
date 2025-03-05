@@ -31,6 +31,13 @@
         <label asp-for="ImageFile" class="w-40">Movie Image</label>
         <input type="file" class="input" asp-for="ImageFile">
         <span asp-validation-for="ImageFile" class="text-danger"></span>
+        @if (!string.IsNullOrEmpty(Model.MovieImage))
+        {
+            <div class="current-image">
+                <p>Current image:</p>
+                <img src="@Model.MovieImage" alt="Movie Image" width="100">
+            </div>
+        }
     </div>
 
     <!-- Cast -->

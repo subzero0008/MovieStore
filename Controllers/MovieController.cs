@@ -1,29 +1,33 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CloudinaryDotNet.Actions;
+using CloudinaryDotNet;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Repositories.Abstract;
 using System.Linq;
+using System.Net;
 
 namespace MovieStoreMvc.Controllers
 {
     [Authorize]
-
     public class MovieController : Controller
     {
         private readonly IMovieService _movieService;
         private readonly IFileService _fileService;
         private readonly IGenreService _genreService;
-        // Конструкторът приема зависимости чрез DI (Dependency Injection)
+        private readonly Cloudinary _cloudinary;
 
-        public MovieController(IGenreService genreService, IMovieService movieService, IFileService fileService)
+        // Конструкторът приема зависимости чрез DI (Dependency Injection)
+        public MovieController(IGenreService genreService, IMovieService movieService, IFileService fileService, Cloudinary cloudinary)
         {
             _movieService = movieService;
             _fileService = fileService;
             _genreService = genreService;
+            _cloudinary = cloudinary;
         }
-        // Метод за показване на формата за добавяне на нов филм
 
+        // Метод за показване на формата за добавяне на нов филм
         public IActionResult Add()
         {
             var model = new Movie
@@ -32,28 +36,32 @@ namespace MovieStoreMvc.Controllers
             };
             return View(model);
         }
-        // Метод за обработка на POST заявката при добавяне на нов филм
 
+        // Метод за обработка на POST заявката при добавяне на нов филм
         [HttpPost]
         public IActionResult Add(Movie model)
-        {            // Зарежда жанровете отново, за да се покажат правилно при грешка във валидацията
-
+        {
+            // Зарежда жанровете отново, за да се покажат правилно при грешка във валидацията
             model.GenreList = _genreService.List().Select(a => new SelectListItem { Text = a.GenreName, Value = a.Id.ToString() });
+
             if (!ModelState.IsValid)
                 return View(model);
 
+            // Проверка за наличие на изображение и качване в Cloudinary
             if (model.ImageFile != null)
             {
-                var fileResult = _fileService.SaveImage(model.ImageFile);
-                if (fileResult.Item1 == 0)
+                var uploadResult = UploadImageToCloudinary(model.ImageFile);
+
+                if (uploadResult == null)
                 {
-                    TempData["msg"] = "File could not be saved";
+                    TempData["msg"] = "File could not be uploaded to Cloudinary";
                     return View(model);
                 }
-                model.MovieImage = fileResult.Item2;
-            }
-            // Запазва филма в базата данни
 
+                model.MovieImage = uploadResult.Url.ToString();  // Записва URL на изображението от Cloudinary
+            }
+
+            // Запазва филма в базата данни
             var result = _movieService.Add(model);
             if (result)
             {
@@ -66,8 +74,8 @@ namespace MovieStoreMvc.Controllers
                 return View(model);
             }
         }
-        // Метод за зареждане на формата за редактиране на съществуващ филм
 
+        // Метод за зареждане на формата за редактиране на съществуващ филм
         public IActionResult Edit(int id)
         {
             var model = _movieService.GetById(id);
@@ -85,7 +93,6 @@ namespace MovieStoreMvc.Controllers
 
             return View(model);
         }
-
 
         [HttpPost]
         public IActionResult Edit(Movie model)
@@ -112,13 +119,15 @@ namespace MovieStoreMvc.Controllers
             }
             else
             {
-                var fileResult = _fileService.SaveImage(model.ImageFile);
-                if (fileResult.Item1 == 0)
+                var uploadResult = UploadImageToCloudinary(model.ImageFile); // Качване на новото изображение в Cloudinary
+
+                if (uploadResult == null)
                 {
-                    TempData["msg"] = "File could not be saved";
+                    TempData["msg"] = "File could not be uploaded to Cloudinary";
                     return View(model);
                 }
-                model.MovieImage = fileResult.Item2;
+
+                model.MovieImage = uploadResult.Url.ToString();  // Записваме URL-то на каченото изображение
             }
 
             // Актуализираме филма
@@ -135,14 +144,51 @@ namespace MovieStoreMvc.Controllers
             }
         }
 
+        // Метод за качване на изображение в Cloudinary
+        private UploadResult UploadImageToCloudinary(IFormFile imageFile)
+        {
+            try
+            {
+                if (imageFile.Length == 0 || !imageFile.ContentType.StartsWith("image/"))
+                {
+                    TempData["msg"] = "Invalid file type";
+                    return null;
+                }
 
+                var uploadParams = new ImageUploadParams()
+                {
+                    File = new FileDescription(imageFile.FileName, imageFile.OpenReadStream())
+                };
 
+                var uploadResult = _cloudinary.Upload(uploadParams);
+
+                if (uploadResult.StatusCode == HttpStatusCode.OK)
+                {
+                    return uploadResult;  // Връща резултата от качването
+                }
+                else
+                {
+                    TempData["msg"] = "Error uploading image to Cloudinary";
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Логване на грешката (ако е необходимо)
+                Console.WriteLine(ex.Message);
+                TempData["msg"] = "An error occurred while uploading the image";
+                return null;
+            }
+        }
+
+        // Метод за показване на списъка с филми
         public IActionResult MovieList()
         {
             var data = _movieService.List();
             return View(data);
         }
 
+        // Метод за изтриване на филм
         public IActionResult Delete(int id)
         {
             var result = _movieService.Delete(id);

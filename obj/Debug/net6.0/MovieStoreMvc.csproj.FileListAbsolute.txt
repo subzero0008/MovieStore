@@ -254,3 +254,4 @@ D:\movies\MovieStoreMvc\MovieStoreMvc\obj\Debug\net6.0\MovieStoreMvc.pdb
 D:\movies\MovieStoreMvc\MovieStoreMvc\obj\Debug\net6.0\MovieStoreMvc.genruntimeconfig.cache
 D:\movies\MovieStoreMvc\MovieStoreMvc\obj\Debug\net6.0\ref\MovieStoreMvc.dll
 D:\movies\MovieStoreMvc\MovieStoreMvc\bin\Debug\net6.0\appsettings.json
+D:\Movies\MovieStoremvc\MovieStoreMvc\bin\Debug\net6.0\CloudinaryDotNet.dll

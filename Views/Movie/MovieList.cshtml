@@ -1,6 +1,4 @@
 ﻿@model MovieStoreMvc.Models.DTO.MovieListVm
-@{
-}
 
 <div class="tbl-container">
     <h2>Movies</h2>
@@ -23,7 +21,12 @@
                 <td>@item.Title</td>
                 <td>@item.GenreNames</td>
                 <td>@item.ReleaseYear</td>
-                <td><img style="height:60px;width:80px" src="/Uploads/@item.MovieImage" /></td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.MovieImage))
+                    {
+                        <img style="height:60px;width:80px" src="@item.MovieImage" />
+                    }
+                </td>
                 <td>@item.Cast</td>
                 <td>@item.Director</td>
                 <td>@item.Synopsis</td>
@@ -34,7 +37,6 @@
                 </td>
             </tr>
         }
-
     </table>
     <div class="input-container">
         <a href="/Movie/Add" class="btn btn-sec">Back</a>
