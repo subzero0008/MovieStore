@@ -30,8 +30,16 @@ MVC (Model-View-Controller) architecture
 - Owner – Has full control over admin profiles and is the only one allowed to edit or delete admin users.
 
 ## Installation
-Prerequisites
 To run the project, you need the following dependencies installed:
+.NET 6 SDK
+CloudinaryDotNet (Version: 1.27.4)
+Microsoft.AspNetCore.Identity.EntityFrameworkCore (Version: 6.0.0)
+Microsoft.EntityFrameworkCore (Version: 6.0.3)
+Microsoft.EntityFrameworkCore.SqlServer (Version: 6.0.0)
+Microsoft.EntityFrameworkCore.Design (Version: 6.0.3)
+Microsoft.EntityFrameworkCore.Tools (Version: 10.0.0-preview.1.25081.1)
+Npgsql.EntityFrameworkCore.PostgreSQL (Version: 6.0.3)
+Microsoft.VisualStudio.Web.CodeGeneration.Design (Version: 6.0.16)
 
 .NET 6 SDK
 SQL Server
@@ -45,7 +53,7 @@ Razor Pages
 cd MovieStoreMvc
 dotnet restore
 Set up the database:
-Update the connection string in appsettings.json with your SQL Server details.
+Update the connection string in appsettings.json with your details.
 Run the migrations to set up the database: dotnet ef database update
 dotnet build
 dotnet run
@@ -61,5 +69,4 @@ Build and Deployment
 Credits
 This application was developed by Yulian Yuriev as part of a web development project.
 
-css
 
