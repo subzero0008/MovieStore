@@ -1,4 +1,5 @@
 # Movie Store Application
+LIVE DEMO: https://moviestore-ljh1.onrender.com/home
 
 The Movie Store is a university project developed for the .NET course. It is a web application built using ASP.NET Core (.NET 6) that provides users with detailed information about various movies. The application uses SQL Server as its database and follows the MVC (Model-View-Controller) architecture.
 
