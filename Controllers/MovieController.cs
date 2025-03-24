@@ -41,13 +41,12 @@ namespace MovieStoreMvc.Controllers
         [HttpPost]
         public IActionResult Add(Movie model)
         {
-            // Зарежда жанровете отново, за да се покажат правилно при грешка във валидацията
             model.GenreList = _genreService.List().Select(a => new SelectListItem { Text = a.GenreName, Value = a.Id.ToString() });
 
             if (!ModelState.IsValid)
                 return View(model);
 
-            // Проверка за наличие на изображение и качване в Cloudinary
+            // Качване на изображение в Cloudinary (ако има)
             if (model.ImageFile != null)
             {
                 var uploadResult = UploadImageToCloudinary(model.ImageFile);
@@ -58,10 +57,16 @@ namespace MovieStoreMvc.Controllers
                     return View(model);
                 }
 
-                model.MovieImage = uploadResult.Url.ToString();  // Записва URL на изображението от Cloudinary
+                model.MovieImage = uploadResult.Url.ToString();
             }
 
-            // Запазва филма в базата данни
+            // Добавяне на трейлър (YouTube Video ID)
+            if (!string.IsNullOrEmpty(model.YouTubeVideoId))
+            {
+                // Може да добавиш валидиране тук, ако е нужно
+            }
+
+            // Добавяне на филма с YouTube Video ID
             var result = _movieService.Add(model);
             if (result)
             {
@@ -74,6 +79,8 @@ namespace MovieStoreMvc.Controllers
                 return View(model);
             }
         }
+
+
 
         // Метод за зареждане на формата за редактиране на съществуващ филм
         public IActionResult Edit(int id)
@@ -97,21 +104,20 @@ namespace MovieStoreMvc.Controllers
         [HttpPost]
         public IActionResult Edit(Movie model)
         {
-            // Ако редактираме филм, премахваме задължителните полета за ImageFile и Genres
-            if (model.Id > 0) // Ако е редакция
+            if (model.Id > 0)
             {
-                ModelState.Remove("ImageFile");  // Премахваме задължителност за изображението
-                ModelState.Remove("Genres");    // Премахваме задължителност за жанровете
+                ModelState.Remove("ImageFile");
+                ModelState.Remove("Genres");
             }
 
             var selectedGenres = model.Genres;
             var multiGenreList = new MultiSelectList(_genreService.List(), "Id", "GenreName", selectedGenres);
             model.MultiGenreList = multiGenreList;
 
+            // Проверка за валидността на модела
             if (!ModelState.IsValid)
                 return View(model);
 
-            // Ако не е качено ново изображение, запазваме старото
             var existingMovie = _movieService.GetById(model.Id);
             if (model.ImageFile == null)
             {
@@ -119,18 +125,27 @@ namespace MovieStoreMvc.Controllers
             }
             else
             {
-                var uploadResult = UploadImageToCloudinary(model.ImageFile); // Качване на новото изображение в Cloudinary
-
+                var uploadResult = UploadImageToCloudinary(model.ImageFile);
                 if (uploadResult == null)
                 {
                     TempData["msg"] = "File could not be uploaded to Cloudinary";
                     return View(model);
                 }
-
-                model.MovieImage = uploadResult.Url.ToString();  // Записваме URL-то на каченото изображение
+                model.MovieImage = uploadResult.Url.ToString();
             }
 
-            // Актуализираме филма
+            // Актуализираме трейлъра с новото ID, ако е било въведено
+            if (!string.IsNullOrEmpty(model.YouTubeVideoId))
+            {
+                existingMovie.YouTubeVideoId = model.YouTubeVideoId;
+            }
+            else
+            {
+                // Ако не е въведен нов YouTube Video ID, оставяме стария
+                model.YouTubeVideoId = existingMovie.YouTubeVideoId;
+            }
+
+            // Актуализираме филма заедно с YouTube Video ID и жанровете
             var result = _movieService.Update(model);
             if (result)
             {
@@ -143,6 +158,8 @@ namespace MovieStoreMvc.Controllers
                 return View(model);
             }
         }
+
+
 
         // Метод за качване на изображение в Cloudinary
         private UploadResult UploadImageToCloudinary(IFormFile imageFile)

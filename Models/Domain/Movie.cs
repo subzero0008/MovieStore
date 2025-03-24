@@ -27,11 +27,9 @@ namespace MovieStoreMvc.Models.Domain
 
         public string? PlaceToShow { get; set; } = string.Empty;
 
-        // Премахваме Required атрибута, за да не бъде задължително при редактиране
         [NotMapped]
         public IFormFile? ImageFile { get; set; }
 
-        // Премахваме Required атрибута за Genres, за да не бъде задължително при редактиране
         [NotMapped]
         public List<int>? Genres { get; set; } = new List<int>();
 
@@ -43,5 +41,8 @@ namespace MovieStoreMvc.Models.Domain
 
         [NotMapped]
         public MultiSelectList? MultiGenreList { get; set; }
+
+        // Ново поле за YouTube трейлър
+        public string? YouTubeVideoId { get; set; }
     }
 }

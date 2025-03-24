@@ -17,6 +17,15 @@
     </div>
 </div>
 
-<div class="w-80 m-auto">
+<!-- Добавяме секция за YouTube трейлър -->
+@if (!string.IsNullOrEmpty(Model.YouTubeVideoId))
+{
+    <div class="movie-trailer w-80 m-auto mt-5">
+        <h4>Watch Trailer</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/@Model.YouTubeVideoId" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+}
+
+<div class="w-80 m-auto mt-5">
     <a href="/Home/Index" class="btn btn-default">Back</a>
 </div>

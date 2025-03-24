@@ -56,6 +56,13 @@
         <span asp-validation-for="Genres" class="text-danger"></span>
     </div>
 
+    <!-- Добавяне на поле за YouTube Video ID -->
+    <div class="input-container">
+        <label asp-for="YouTubeVideoId" class="w-40">YouTube Video ID</label>
+        <input type="text" class="input" asp-for="YouTubeVideoId">
+        <span asp-validation-for="YouTubeVideoId" class="text-danger"></span>
+    </div>
+
     @if (TempData["msg"] != null)
     {
         <div class="alert mb-1">

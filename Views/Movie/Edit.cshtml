@@ -75,6 +75,13 @@
         <span asp-validation-for="Genres" class="text-danger"></span>
     </div>
 
+    <!-- YouTube Trailer ID -->
+    <div class="input-container">
+        <label asp-for="YouTubeVideoId" class="w-40">YouTube Trailer ID</label>
+        <input type="text" class="input" asp-for="YouTubeVideoId">
+        <span asp-validation-for="YouTubeVideoId" class="text-danger"></span>
+    </div>
+
     @if (TempData["msg"] != null)
     {
         <div class="alert mb-1">
