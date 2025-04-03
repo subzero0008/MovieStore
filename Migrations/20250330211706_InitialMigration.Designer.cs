@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MovieStoreMvc.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250304025947_NewMigrationName")]
-    partial class NewMigrationName
+    [Migration("20250330211706_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -270,6 +270,9 @@ namespace MovieStoreMvc.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("YouTubeVideoId")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

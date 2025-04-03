@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MovieStoreMvc.Migrations
 {
-    public partial class NewMigrationName : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -75,7 +75,8 @@ namespace MovieStoreMvc.Migrations
                     Cast = table.Column<string>(type: "text", nullable: false),
                     Director = table.Column<string>(type: "text", nullable: false),
                     Synopsis = table.Column<string>(type: "text", nullable: true),
-                    PlaceToShow = table.Column<string>(type: "text", nullable: true)
+                    PlaceToShow = table.Column<string>(type: "text", nullable: true),
+                    YouTubeVideoId = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
